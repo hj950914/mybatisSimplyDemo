@@ -1,9 +1,11 @@
 package com.hj.util;
 
+import com.mysql.cj.protocol.Resultset;
 import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -41,6 +43,20 @@ public class JdbcUtil {
             e.printStackTrace();
         }
         return connection;
+    }
+
+    //关闭资源
+    public static void close(PreparedStatement ps, Connection connection) {
+        try {
+            if (ps != null) {
+                ps.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
