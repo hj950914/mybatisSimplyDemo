@@ -3,6 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
+    <welcome-file-list>
+        <welcome-file>CommandListSrvlet.action</welcome-file>
+    </welcome-file-list>
 
     <servlet>
         <servlet-name>ListServlet</servlet-name>
@@ -29,6 +32,24 @@
     <servlet-mapping>
         <servlet-name>DeleteBatchServlet</servlet-name>
         <url-pattern>/DeleteBatchServlet.action</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommandListSrvlet</servlet-name>
+        <servlet-class>com.hj.servlet.CommandListSrvlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandListSrvlet</servlet-name>
+        <url-pattern>/CommandListSrvlet.action</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CommandDeleteOneServlet</servlet-name>
+        <servlet-class>com.hj.servlet.CommandDeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandDeleteOneServlet</servlet-name>
+        <url-pattern>/CommandDeleteOneServlet.action</url-pattern>
     </servlet-mapping>
 
 </web-app>

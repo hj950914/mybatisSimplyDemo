@@ -21,7 +21,7 @@
 </head>
 
 <body style="background: #e1e9eb;">
-<form action="<%=basePath%>List.action" id="mainForm" method="post">
+<form action="<%=path%>/CommandListSrvlet.action" id="mainForm" method="post">
     <div class="right">
         <div class="current">当前位置：<a href="javascript:void(0)" style="color:#6E6E6E;">内容管理</a> &gt; 内容列表</div>
         <div class="rightCont">
@@ -33,7 +33,7 @@
                 <tr>
                     <td width="90" align="right">指令名称：</td>
                     <td>
-                        <input name="command" type="text" class="allInput" value="${command}"/>
+                        <input name="name" type="text" class="allInput" value="${name}"/>
                     </td>
                     <td width="90" align="right">描述：</td>
                     <td>
@@ -53,15 +53,15 @@
                         <th>描述</th>
                         <th>操作</th>
                     </tr>
-                    <c:forEach items="${messageList}" var="message" varStatus="status">
+                    <c:forEach items="${commandList}" var="command" varStatus="status">
                         <tr <c:if test="${status.index%2!=0}">style="background-color:#ECF6EE;"</c:if>>
-                            <td><input type="checkbox" name="ids" value="${message.id}"/></td>
+                            <td><input type="checkbox" name="ids" value="${command.id}"/></td>
                             <td>${status.index+1}</td>
-                            <td>${message.command}</td>
-                            <td>${message.description}</td>
+                            <td>${command.name}</td>
+                            <td>${command.description}</td>
                             <td>
                                 <a href="#">修改</a>&nbsp;&nbsp;&nbsp;
-                                <a href="<%=basePath%>DeleteOneServlet.action?id=${message.id}"
+                                <a href="<%=path%>/CommandDeleteOneServlet.action?id=${command.id}"
                                    onclick="delete1()">删除</a>
                             </td>
                         </tr>

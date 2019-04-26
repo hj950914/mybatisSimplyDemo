@@ -31,6 +31,8 @@
     <!--加入sql的配置文件-->
     <mappers>
         <mapper resource="Message.xml"/>
+        <mapper resource="Command.xml"/>
+        <mapper resource="CommandContent.xml"/>
     </mappers>
 
 </configuration>

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Author: hj
  * Date: 2019-04-24 19:07
- * Description: <描述>
+ * Description: Message表相关操作
  */
 public interface MessageService {
 

@@ -12,11 +12,12 @@
                name:指定Appender的名字.
 　　　　　　　　fileName:指定输出日志的目的文件带全路径的文件名.
 　　　　　　　　PatternLayout:输出格式，不设置默认为:%m%n-->
-        <!--<File name="Console">
-            &lt;!&ndash;日志信息输出到/Users/huangjie/Desktop/log4j2Print.txt文件里面&ndash;&gt;
+        <File name="Console">
+            <!--日志信息输出到/Users/huangjie/Desktop/log4j2Print.txt文件里面-->
             <fileName>/Users/huangjie/Desktop/log4j2Print.txt</fileName>
+            <!--<fileName>/root/log4j2Print.txt</fileName>-->
             <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
-        </File>-->
+        </File>
 
     </Appenders>
     <!--Loggers节点,里面是子节点-->
